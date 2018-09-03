@@ -26,7 +26,6 @@ class ChecklistViewController: UITableViewController {
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         
-        
         let newRowIndex = checklistItems.count
         
         let newItem = ChecklistItem(name: "I am a new row", checked: false)
@@ -36,9 +35,7 @@ class ChecklistViewController: UITableViewController {
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
         
-        
     }
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return checklistItems.count
