@@ -14,6 +14,7 @@ class ChecklistViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checklistItems = populateChecklistItems()
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,6 +59,18 @@ class ChecklistViewController: UITableViewController {
     func swipeToDelete(indexPath: IndexPath) {
         checklistItems.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+    }
+    
+    func populateChecklistItems() -> [ChecklistItem] {
+        let tasks = ["Walk the dog", "Build an iOS app", "Get some sleep", "Eat delicious food", "Go for a run"]
+        var items: [ChecklistItem] = []
+        
+        for task in tasks {
+            let item = ChecklistItem(name: task, checked: false)
+            items.append(item)
+        }
+        
+        return items
     }
 }
 
