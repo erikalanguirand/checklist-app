@@ -10,8 +10,7 @@ import UIKit
 
 class ChecklistViewController: UITableViewController {
     
-    var checklistItems = ["Walk the dog", "Brush my teeth",
-                          "Build an iOS app", "Get some sleep!", "Go for a run"]
+    var checklistItems: [ChecklistItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,7 @@ class ChecklistViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
-        cell.textLabel?.text = checklistItems[indexPath.row]
+        cell.textLabel?.text = checklistItems[indexPath.row].name
         
         return cell
     }
