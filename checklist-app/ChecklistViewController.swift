@@ -35,6 +35,12 @@ class ChecklistViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        configureCheckmark(indexPath: indexPath)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func configureCheckmark(indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             if cell.accessoryType == .none {
                 cell.accessoryType = .checkmark
@@ -42,8 +48,6 @@ class ChecklistViewController: UITableViewController {
                 cell.accessoryType = .none
             }
         }
-        
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
