@@ -15,6 +15,9 @@ class ChecklistViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateChecklistItems()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
     override func didReceiveMemoryWarning() {
