@@ -52,9 +52,13 @@ class ChecklistViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            checklistItems.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            swipeToDelete(indexPath: indexPath)
         }
+    }
+    
+    func swipeToDelete(indexPath: IndexPath) {
+        checklistItems.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
     }
 }
 
