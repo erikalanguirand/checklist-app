@@ -24,6 +24,22 @@ class ChecklistViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
+        
+        
+        let newRowIndex = checklistItems.count
+        
+        let newItem = ChecklistItem(name: "I am a new row", checked: false)
+        checklistItems.append(newItem)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        
+        
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return checklistItems.count
     }
