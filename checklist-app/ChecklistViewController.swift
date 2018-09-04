@@ -29,7 +29,15 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     }
     
     func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
+        
+        let newRowIndex = checklistItems.count
+        checklistItems.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
         navigationController?.popViewController(animated: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,20 +45,6 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
             let controller = segue.destination as! AddItemViewController
             controller.delegate = self
         }
-    }
-    
-    @IBAction func addItem(_ sender: UIBarButtonItem) {
-        
-        let newRowIndex = checklistItems.count
-        
-        let newItem = ChecklistItem()
-        newItem.name = "I am a new row"
-        checklistItems.append(newItem)
-        
-        let indexPath = IndexPath(row: newRowIndex, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
