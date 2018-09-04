@@ -14,9 +14,11 @@ class AddItemViewController: UITableViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func cancel() {
+        navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func done(_ sender: Any) {
+    @IBAction func done() {
+        navigationController?.popViewController(animated: true)
     }
 }
