@@ -47,6 +47,9 @@ class ChecklistViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
         cell.textLabel?.text = checklistItems[indexPath.row].name
         
+        let item = checklistItems[indexPath.row]
+        configureCheckmark(for: cell, with: item)
+        
         return cell
     }
     
@@ -88,7 +91,6 @@ class ChecklistViewController: UITableViewController {
         for task in tasks {
             let item = ChecklistItem()
             item.name = task
-            item.toggleChecked()
             checklistItems.append(item)
         }
     }
