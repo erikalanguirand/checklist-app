@@ -28,7 +28,8 @@ class ChecklistViewController: UITableViewController {
         
         let newRowIndex = checklistItems.count
         
-        let newItem = ChecklistItem(name: "I am a new row", checked: false)
+        let newItem = ChecklistItem()
+        newItem.name = "I am a new row"
         checklistItems.append(newItem)
         
         let indexPath = IndexPath(row: newRowIndex, section: 0)
