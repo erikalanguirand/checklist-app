@@ -10,6 +10,8 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
 
+    @IBOutlet weak var itemText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,6 +22,10 @@ class AddItemViewController: UITableViewController {
     
     @IBAction func done() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        return nil
     }
 }
 
