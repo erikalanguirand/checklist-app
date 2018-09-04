@@ -18,18 +18,22 @@ protocol AddItemViewControllerDelegate: class {
 class AddItemViewController: UITableViewController {
 
     @IBOutlet weak var itemText: UITextField!
-    var delegate: AddItemViewControllerDelegate
+    weak var delegate: AddItemViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func cancel() {
-        navigationController?.popViewController(animated: true)
+        delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func done() {
-        navigationController?.popViewController(animated: true)
+        let item = ChecklistItem()
+        item.name = itemText.text!
+        item.checked = false
+        
+        delegate?.addItemViewController(self, didFinishAdding: item)
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
