@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct ChecklistItem {
+class ChecklistItem {
     
-    var name: String
-    var checked: Bool
+    var name = ""
+    var checked = false
     
-    mutating func toggleChecked() {
+    func toggleChecked() {
         checked = !checked
     }
 }
