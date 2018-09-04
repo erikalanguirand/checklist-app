@@ -14,5 +14,9 @@ class AddItemViewController: UITableViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func cancel(_ sender: Any) {
+    }
     
+    @IBAction func done(_ sender: Any) {
+    }
 }
