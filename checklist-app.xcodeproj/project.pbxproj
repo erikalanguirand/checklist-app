@@ -13,6 +13,7 @@
 		03657282213DC88F00797688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03657281213DC88F00797688 /* Assets.xcassets */; };
 		03657285213DC88F00797688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03657283213DC88F00797688 /* LaunchScreen.storyboard */; };
 		0365728D213DCD0200797688 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365728C213DCD0200797688 /* ChecklistItem.swift */; };
+		0365728F213E347200797688 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365728E213E347200797688 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		03657284213DC88F00797688 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03657286213DC88F00797688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0365728C213DCD0200797688 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		0365728E213E347200797688 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				0365727A213DC88E00797688 /* AppDelegate.swift */,
 				0365727C213DC88E00797688 /* ChecklistViewController.swift */,
+				0365728E213E347200797688 /* AddItemViewController.swift */,
 				0365728C213DCD0200797688 /* ChecklistItem.swift */,
 				0365727E213DC88E00797688 /* Main.storyboard */,
 				03657281213DC88F00797688 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0365727D213DC88E00797688 /* ChecklistViewController.swift in Sources */,
+				0365728F213E347200797688 /* AddItemViewController.swift in Sources */,
 				0365728D213DCD0200797688 /* ChecklistItem.swift in Sources */,
 				0365727B213DC88E00797688 /* AppDelegate.swift in Sources */,
 			);

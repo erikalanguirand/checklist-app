@@ -56,7 +56,7 @@
         <!--Add Item-->
         <scene sceneID="vxz-WT-d9D">
             <objects>
-                <tableViewController id="lxX-8P-r8Z" sceneMemberID="viewController">
+                <tableViewController id="lxX-8P-r8Z" customClass="AddItemViewController" customModule="checklist_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Sr-aP-f4l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
                             <outlet property="delegate" destination="lxX-8P-r8Z" id="E0M-5Z-NkT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Item" id="O0m-5L-jz3">
+                    <navigationItem key="navigationItem" title="Add Item" largeTitleDisplayMode="never" id="O0m-5L-jz3">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hGp-Z0-bp9"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="hxX-RD-AbU"/>
                     </navigationItem>
